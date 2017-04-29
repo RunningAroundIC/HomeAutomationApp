@@ -1,3 +1,13 @@
-<h1>
-  {{title}}
-</h1>
+<button class="nav-Button" (click)="toggleNav()"></button>
+<nav class="nav" [@navTrigger]="expandedState" (clickOutside)="toggleNav()" >
+    <ul class="nav-list">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a>Test</a></li>
+        <li><a>Test</a></li>
+    </ul>
+
+</nav>
+
+<div id="routerOutlet" [@pustLeftTrigger]="expandedState">
+    <router-outlet></router-outlet>
+</div>
