@@ -6,7 +6,7 @@ import { Animation } from './animation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations:[Animation.navTrigger, Animation.pustLeftTrigger]
+  animations:[Animation.navTrigger, Animation.pustLeftTrigger, Animation.fadeInCloseBotton]
 })
 
 @Directive

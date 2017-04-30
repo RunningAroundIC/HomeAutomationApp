@@ -1,10 +1,18 @@
-<button class="nav-Button" (click)="toggleNav()"></button>
+<div class="nav-header">
+    <div class="nav-Button" (click)="toggleNav()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+</div>
+
 <nav class="nav" [@navTrigger]="expandedState" (clickOutside)="toggleNav()" >
-    <ul class="nav-list">
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a>Test</a></li>
-        <li><a>Test</a></li>
-    </ul>
+    <div class="nav-list">
+        <i id="closeMenu" class="fa fa-window-close" aria-hidden="true" (click)="toggleNav()" [@fadeInCloseBotton]="expandedState"></i>
+        <a id="home" routerLink="/home" routerLinkActive="active">Home</a>
+        <a href="#">Test</a>
+        <a href="#">About</a>
+    </div>
 
 </nav>
 
