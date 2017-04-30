@@ -11,7 +11,7 @@ nav/*Side Navigation*/
     padding-top: 30px;
 }
 
-.nav-header
+.nav-header/*header styling*/
 {
     position: absolute;
     top: 0;
@@ -19,7 +19,7 @@ nav/*Side Navigation*/
     width: 100%;
     height: 50px;
     background-color: #1a1c1e;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #7e8589;
 }
 
 .nav-Button/*Hanburger button for toggeleling Side Navigation*/
@@ -46,6 +46,15 @@ nav/*Side Navigation*/
     background-color: #c66a19;
 }
 
+.nav-headline/*Headline styling*/
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    color: #7e8589;
+}
+
 .nav-list/*Menu links placement*/
 {
      text-align: center;
@@ -53,7 +62,7 @@ nav/*Side Navigation*/
 
 .nav-list a/*Menu links styling*/
 {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #7e8589;
     font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     padding: 16px;
@@ -69,9 +78,15 @@ nav/*Side Navigation*/
     background-color: #47494c;
 }
 
-#home
+.nav-list a.active /*Menu indication of current page*/
+{
+    background-color: #47494c;
+    color: #19c63e;
+}
+
+#home/*Menu styling for border for Home button*/
 {   
-    border-top: 1px solid gray;
+    border-top: 1px solid #7e8589;
     margin-top: 20px;
 }
 
@@ -81,9 +96,9 @@ nav/*Side Navigation*/
     color: #7e8589;
     position: absolute;
     top: 0;
-    font-size: 24px;
+    font-size: 28px;
     margin-left: 60px;
-    margin-top: 10px;
+    margin-top: 13px;
     transition: 0.4s;
 }
 
@@ -92,10 +107,9 @@ nav/*Side Navigation*/
     color: #c66a19;
 }
 
-
-
 #routerOutlet/*Routher outlet content placement*/
 {
     margin-top: 55px;
+    position: relative;
 }
 
