@@ -7,8 +7,8 @@
 </div>
 
 <nav class="nav" [@navTrigger]="expandedState" (clickOutside)="toggleNav()" >
-    <div class="nav-list">
-        <i id="closeMenu" class="fa fa-window-close" aria-hidden="true" (click)="toggleNav()" [@fadeInCloseBotton]="expandedState"></i>
+    <div class="nav-list" [@fadeInCloseBotton]="expandedState">
+        <i id="closeMenu" class="fa fa-window-close" aria-hidden="true" (click)="toggleNav()" ></i>
         <a id="home" routerLink="/home" routerLinkActive="active">Home</a>
         <a href="#">Test</a>
         <a href="#">About</a>

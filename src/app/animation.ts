@@ -22,6 +22,6 @@ export const Animation =
     [
         state('expanded', style({opacity: '1'})),
         state('collapsed', style({opacity: '0'})),
-        transition('collapsed => expanded', animate('.7s', style({opacity: 1})))
+        transition('collapsed => expanded', animate('.6s', style({opacity: 1})))
     ])
 }

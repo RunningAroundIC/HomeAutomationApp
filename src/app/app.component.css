@@ -85,7 +85,6 @@ nav/*Side Navigation*/
     margin-left: 60px;
     margin-top: 10px;
     transition: 0.4s;
-    opacity: 0;
 }
 
 #closeMenu:hover/*Menu close button hover styling*/
