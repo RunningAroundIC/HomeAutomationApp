@@ -50,3 +50,10 @@
     color: #c66a19;
 }
 
+.settingsBox button
+{
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 2px;
+    padding: 3px;
+}
+

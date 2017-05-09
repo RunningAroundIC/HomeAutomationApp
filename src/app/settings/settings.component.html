@@ -2,13 +2,14 @@
   <div class="container">
     <div id="mainInfo" class="settingsBox">
       <h2>Info:</h2>
-      <p>Name:</p><input class="textInput" type="text" name="app_name" max="30" value="RAIC Home Automation"><br><br>
-      <p>Owner:</p><input class="textInput" type="text" name="owner" max="20" value="Karsten"><br><br>
+      <p>Name:</p><input #Name class="textInput" type="text" placeholder="Name" max="30"><br><br>
+      <p>Owner:</p><input #owner class="textInput" type="text" placeholder="Owner" max="20"><br><br>
       <p>Devices:</p><br>
-      <input class="checkInput" type="checkbox" name="LifeX" value="LifeX"><span>LifeX Bulb</span> <br>
-      <input class="checkInput" type="checkbox" name="PhilipsHue" value="PhilipsHue"><span>Philips Hue</span><br>
-      <input class="checkInput" type="checkbox" name="IkeaTrådfri" value="IkeaTrådfri"><span>Ikea Trådfri</span><br>
-      <input class="checkInput" type="checkbox" name="Custom" value="Custom"><span>Custom input</span>
+      <input #devicesInUse class="checkInput" type="checkbox" name="LifeX" value="LifeX"><span>LifeX Bulb</span> <br>
+      <input #devicesInUse class="checkInput" type="checkbox" name="PhilipsHue" value="PhilipsHue"><span>Philips Hue</span><br>
+      <input #devicesInUse class="checkInput" type="checkbox" name="IkeaTrådfri" value="IkeaTrådfri"><span>Ikea Trådfri</span><br>
+      <input #devicesInUse class="checkInput" type="checkbox" name="Custom" value="Custom"><span>Custom input</span><br>
+      <input type="submit" value="Save" (click)="saveSettings(Name.value)">
     </div>
   </div>
 </main>
