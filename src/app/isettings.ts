@@ -1,4 +1,4 @@
-export interface Iuser 
+export interface Isettings 
 {
     _id: string;
     appName: string;

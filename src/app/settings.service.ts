@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from "@angular/http";
 import { Observable } from 'rxjs';
-import { Iuser } from './iuser';
+import { Isettings } from './isettings';
 
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class UserService 
+export class SettingsService 
 {
 
   //private userSettings: Observable<Iuser>;
@@ -20,7 +20,7 @@ export class UserService
 
   public saveSettings()
   {
-    
+
   }
 
 
