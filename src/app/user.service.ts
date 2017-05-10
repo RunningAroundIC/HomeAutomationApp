@@ -9,11 +9,19 @@ import 'rxjs/add/operator/map';
 export class UserService 
 {
 
-  private userSettings: Observable<Iuser>;
+  //private userSettings: Observable<Iuser>;
 
-  private settings: Iuser;
+
+  //API
+  private url: string = "http://localhost:3000/settings";
 
 
   constructor(private http: Http) { }
+
+  public saveSettings()
+  {
+    
+  }
+
 
 }
