@@ -1,6 +1,10 @@
 export interface Iuser 
 {
+    _id: string;
     appName: string;
     owner: string;
-    devicesInUse: boolean[];
+    LifX: boolean;
+    PhillipsHue: boolean;
+    IkeaTraadFri: boolean;
+    Custom: boolean;
 }

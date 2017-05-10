@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers, RequestOptions } from "@angular/http";
 import { Observable } from 'rxjs';
 import { Iuser } from './iuser';
 
@@ -13,6 +14,6 @@ export class UserService
   private settings: Iuser;
 
 
-  constructor() { }
+  constructor(private http: Http) { }
 
 }
