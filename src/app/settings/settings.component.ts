@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { SettingsService } from '../settings.service';
 import { Settings } from '../settings';
 
@@ -10,14 +11,19 @@ import { Settings } from '../settings';
 })
 export class SettingsComponent implements OnInit 
 {
-
+  private routeState;
   private settings: Settings;
+  private newSettings: Settings[];
   private returnedSettings: Settings[];
 
-  constructor(private service : SettingsService) {}
+  appName: string;
+
+  constructor(private service : SettingsService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() 
   {
+    this.routeState = this.activatedRoute.snapshot.routeConfig;
+    console.log(this.routeState);
     // GET ALL SETTINGS FROM DB
     // IF ANY SETTINGS
       // USE FIRST SETTING FOR SETTING
@@ -29,7 +35,11 @@ export class SettingsComponent implements OnInit
 
   private save()
   {
-    this.service.saveSettings()
+    this.service.saveSettings(this.settings).subscribe(x => 
+    {
+       this.newSettings.push(x);
+       this.settings = new Settings();
+    });
   }
 
   private checkSettings()
@@ -37,7 +47,7 @@ export class SettingsComponent implements OnInit
     this.service.getSettings().subscribe(x => 
     {
       this.returnedSettings = x;
-      console.log(x);
+      //console.log(x);
       if (x.length > 0)
       {
         this.settings = x[0];

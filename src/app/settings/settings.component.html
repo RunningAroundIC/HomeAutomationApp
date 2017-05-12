@@ -2,14 +2,14 @@
   <div class="container">
     <div id="mainInfo" class="settingsBox">
       <h2>Info:</h2>
-      <form> <!--Brug Lable i stedet for P-->
-        <label for="name">Name:</label><input #Name class="textInput" id="name" type="text" placeholder="Name" max="30"><br><br>
-        <label for="owner">Owner:</label><input #owner class="textInput" id="owner" type="text" placeholder="Owner" max="20"><br><br>
+      <form (ngSubmit)="save()">
+        <label for="appName">Name:</label><input #appName class="textInput" id="appName" type="text" placeholder="Name" max="30" ><br><br>
+        <label for="owner">Owner:</label><input #owner class="textInput" id="owner" type="text" placeholder="Owner" max="20" ><br><br>
         <p>Devices:</p><br>
-        <input class="checkInput" type="checkbox" id="lifx"         name="LifX"         value="true"><label for="lifx">LifeX Bulb</label> <br>
-        <input class="checkInput" type="checkbox" id="phillipshue"  name="PhilipsHue"   value="true"><label for="phillipshue">Philips Hue</label><br>
-        <input class="checkInput" type="checkbox" id="ikeatraadfri" name="IkeaTraadfri" value="true"><label for="ikeatraadfri">Ikea Trådfri</label><br>
-        <input class="checkInput" type="checkbox" id="custom"       name="Custom"       value="true"><label for="custom">Custom input</label><br>
+        <input class="checkInput" #lifx   type="checkbox" id="lifx"         name="LifX"         value="true" ><label for="lifx">LifeX Bulb</label> <br>
+        <input class="checkInput" #ph     type="checkbox" id="phillipshue"  name="PhilipsHue"   value="true" ><label for="phillipshue">Philips Hue</label><br>
+        <input class="checkInput" #itf    type="checkbox" id="ikeatraadfri" name="IkeaTraadfri" value="true" ><label for="ikeatraadfri">Ikea Trådfri</label><br>
+        <input class="checkInput" #custom type="checkbox" id="custom"       name="Custom"       value="true" ><label for="custom">Custom input</label><br>
         <input type="submit" value="Save">
       </form>
     </div>

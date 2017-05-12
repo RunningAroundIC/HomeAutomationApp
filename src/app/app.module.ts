@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SettingsComponent } from './settings/settings.component';
 
+import { SingletonService } from './singleton.service'; //Test keeping data when routing
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,7 @@ import { SettingsComponent } from './settings/settings.component';
     AppRouterModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SingletonService], //Test keeping data when routing
   bootstrap: [AppComponent]
 })
 export class AppModule { }

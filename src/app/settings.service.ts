@@ -15,16 +15,16 @@ export class SettingsService
   constructor(private http: Http) { }
 
   //Creat
-  public saveSettings()
+  public saveSettings(settings : Settings): Observable<Settings>
   {
-
+    var data = JSON.stringify(settings);
+    return this.http.post(this.settingsUrl, data).map(response => response.json());
   }
 
   //Get
   public getSettings(): Observable<Settings[]>
   {
-    let result = this.http.get(this.settingsUrl).map(responce => responce.json());
-    console.log(result);
+    let result = this.http.get(this.settingsUrl).map(response => response.json());
     return result;
   }
 
