@@ -29,9 +29,10 @@ export class SettingsService
   }
 
   //Update
-  public updateSettings()
+  public updateSettings(settings : Settings): Observable<Settings>
   {
-
+    var data = JSON.stringify(settings);
+    return this.http.put(this.settingsUrl, data).map(response => response.json());
   }
 
   //Delete
