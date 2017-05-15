@@ -18,7 +18,7 @@ export class SettingsService
   public saveSettings(settings : Settings): Observable<Settings>
   {
     var data = JSON.stringify(settings);
-    return this.http.post(this.settingsUrl, data).map(response => response.json());
+    return this.http.post(this.settingsUrl, data, this.getHeaderOptions()).map(response => response.json());
   }
 
   //Get
@@ -32,13 +32,19 @@ export class SettingsService
   public updateSettings(settings : Settings): Observable<Settings>
   {
     var data = JSON.stringify(settings);
-    return this.http.put(this.settingsUrl, data).map(response => response.json());
+    return this.http.put(this.settingsUrl + "/" + settings._id, data, this.getHeaderOptions()).map(response => response.json());
   }
 
   //Delete
-  public deleteSettings()
+  public deleteSettings(id: string)
   {
+    return this.http.delete(this.settingsUrl + "/delete/" + id, this.getHeaderOptions()).map(responce => responce.json());
+  }
 
+  private getHeaderOptions(): RequestOptions 
+  {
+    let headers = new Headers({'Content-Type': 'application/json'});
+    return new RequestOptions({headers: headers});
   }
 
 }

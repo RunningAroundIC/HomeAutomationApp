@@ -11,40 +11,54 @@ import { Settings } from '../settings';
 })
 export class SettingsComponent implements OnInit 
 {
-  private routeState;
   private settings: Settings;
-  private newSettings: Settings[];
   private returnedSettings: Settings[];
 
-  appName: string;
+  private isData: boolean;
 
   constructor(private service : SettingsService, private router: Router, private activatedRoute: ActivatedRoute) {}
-
-  private checkSettings()
-  {
-    this.service.getSettings().subscribe(response => {this.returnedSettings = response; console.log(response);});
-  }
-
-
 
   ngOnInit() 
   {
     this.checkSettings();
-    this.routeState = this.activatedRoute.snapshot.routeConfig;
+
+    // this.checkSettings();
+    // this.routeState = this.activatedRoute.snapshot.routeConfig;
     //console.log(this.routeState);
-    
-    console.log(this.returnedSettings);
+    // console.log(this.returnedSettings);
   }
 
-  private save()
+    private checkSettings()
   {
-    if(this.checkSettings.length > 0)
+    this.service.getSettings().subscribe(response => {
+      this.returnedSettings = response;
+      if(this.returnedSettings.length > 0)
+      {
+        this.settings = this.returnedSettings[0];
+        console.log(this.returnedSettings[0])
+        this.isData = true;
+      }
+      else
+      {
+        this.settings = new Settings();
+        this.isData = false;
+      }
+    });
+    
+  }
+
+  private save(form:any)
+  {
+    console.log(form);
+
+    if(this.isData === false)
     {
-      this.service.saveSettings(this.settings).subscribe(x => {this.newSettings.push(x); this.settings = new Settings();});
+      this.service.saveSettings(this.settings).subscribe();
+      this.isData = true;
     }
     else
     {
-      this.service.updateSettings(this.settings).subscribe(x => {this.newSettings.push(x)})
+      this.service.updateSettings(this.settings).subscribe();
     }
     
   }
