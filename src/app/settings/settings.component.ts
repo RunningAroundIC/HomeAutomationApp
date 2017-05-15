@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { SettingsService } from '../settings.service';
 import { Settings } from '../settings';
@@ -16,16 +16,13 @@ export class SettingsComponent implements OnInit
 
   private isData: boolean;
 
+  @ViewChild('f') infoForm: any;
+
   constructor(private service : SettingsService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() 
   {
     this.checkSettings();
-
-    // this.checkSettings();
-    // this.routeState = this.activatedRoute.snapshot.routeConfig;
-    //console.log(this.routeState);
-    // console.log(this.returnedSettings);
   }
 
     private checkSettings()
@@ -35,7 +32,7 @@ export class SettingsComponent implements OnInit
       if(this.returnedSettings.length > 0)
       {
         this.settings = this.returnedSettings[0];
-        console.log(this.returnedSettings[0])
+        //console.log(this.returnedSettings[0])
         this.isData = true;
       }
       else
@@ -49,7 +46,7 @@ export class SettingsComponent implements OnInit
 
   private save(form:any)
   {
-    console.log(form);
+    //console.log(form);
 
     if(this.isData === false)
     {
@@ -59,15 +56,13 @@ export class SettingsComponent implements OnInit
     else
     {
       this.service.updateSettings(this.settings).subscribe();
-    }
-    
+    } 
   }
 
-  // GET ALL SETTINGS FROM DB
-    // IF ANY SETTINGS
-      // USE FIRST SETTING FOR SETTING
-    // ELSE
-      // CREATE NEW SETTING
-      // USE NEW SETTING FOR SETTING
+  private deleteSettings()
+  {
+    this.service.deleteSettings(this.settings._id).subscribe();
+    this.infoForm.reset();
+  }
 
 }
