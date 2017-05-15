@@ -16,38 +16,62 @@
         <input class="submitInput" type="submit" value="Save">
       </form>
     </div>
-    <div id="lifxInfo" class="boxLeftMargin">
-      <div *ngIf="settings.lifX; then lifx;"></div>
+
+    <div id="lifxInfo" class="deviceBox">
+      <div *ngIf="settings.lifX; then lifx; else hidden"></div>
       <ng-template #lifx>
         <div class="settingsBox">
           <h2>LifX:</h2>
+          <p>
+            LifX is active, by clicking on the gear icon you 
+            will be able to setup your LifX Wi-Fi bulb.
+          </p>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup"></i>
         </div>
       </ng-template>
     </div>
-    <div id="philipsHueInfo" class="boxLeftMargin">
-      <div *ngIf="settings.philipsHue; then philipsHue;"></div>
+
+    <div id="philipsHueInfo" class="deviceBox">
+      <div *ngIf="settings.philipsHue; then philipsHue; else hidden;"></div>
       <ng-template #philipsHue>
         <div class="settingsBox">
           <h2>Philips Hue:</h2>
+          <p>
+            Setup of Philips Hue system.
+          </p>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup"></i>
         </div>
       </ng-template>
     </div>
-    <div id="ikeaTraadFriInfo" class="boxLeftMargin">
-      <div *ngIf="settings.ikeaTraadFri; then itf;"></div>
+
+    <div id="ikeaTraadFriInfo" class="deviceBox">
+      <div *ngIf="settings.ikeaTraadFri; then itf; else hidden;"></div>
       <ng-template #itf>
         <div class="settingsBox">
           <h2>Ikea Trådfri:</h2>
+          <p>
+            Setup of Ikea Trådfri system.
+          </p>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup"></i>
         </div>
       </ng-template>
     </div>
-    <div id="customInfo" class="boxLeftMargin">
-      <div *ngIf="settings.custom; then custom;"></div>
+
+    <div id="customInfo" class="deviceBox">
+      <div *ngIf="settings.custom; then custom; else hidden;"></div>
       <ng-template #custom>
         <div class="settingsBox">
           <h2>Custom:</h2>
+          <p>
+            Custom devise now available for setup, this is ment for addition of e.g. weather information, 
+            IOT devices or other services. By pressing on the gear icon, you will be able to
+            setup a custom service(s) for your home.
+          </p>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup"></i>
         </div>
       </ng-template>
     </div>
+
   </ng-template>
   </div>
 </main>

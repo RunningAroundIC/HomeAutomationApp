@@ -58,9 +58,19 @@
     padding: 3px;
 }
 
+.checkInput
+{
+    cursor: pointer;
+}
+
 .checkInput:focus
 {
     outline-color: #c66a19;
+}
+
+.submitInput
+{
+    cursor: pointer;
 }
 
 .submitInput:focus
@@ -68,9 +78,34 @@
     outline-color: #c66a19;
 }
 
-.boxLeftMargin
+.deviceBox
 {
+    position: relative;
     margin-left: 3px;
+}
+
+.deviceBox p
+{
+    text-align: left;
+    max-width: 15rem;
+    color: white;
+}
+
+.setupCog
+{
+    cursor: pointer;
+    font-size: 32px;
+    color: #7e8589;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s; 
+}
+
+.setupCog:hover
+{
+    color: #19c63e;
 }
 
 #deleteSettingsButton
