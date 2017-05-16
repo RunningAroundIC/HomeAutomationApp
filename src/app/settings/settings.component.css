@@ -13,7 +13,7 @@
     border: 1px solid #7e8589;
     border-radius: 10px;
     width: auto;
-    min-height: 255px;
+    min-height: 260px;
     padding: 7px;
     background-color: background-image -webkit-gradient(linear, left top, left bottom, from(start-color), to(end-color));
     background-image: -webkit-linear-gradient(top, #1a1c1e, transparent);
@@ -82,6 +82,7 @@
 {
     position: relative;
     margin-left: 3px;
+    border: none;
 }
 
 .deviceBox p

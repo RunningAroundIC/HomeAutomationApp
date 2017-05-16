@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
-import { SettingsService } from '../settings.service';
-import { Settings } from '../settings';
+import { Router, ActivatedRoute, Params} from '@angular/router';
+import { SettingsService } from 'app/services/settings/settings.service';
+import { Settings } from 'app/services/settings/settings';
 
 @Component({
   selector: 'app-settings',
