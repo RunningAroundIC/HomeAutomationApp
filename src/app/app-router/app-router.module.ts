@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
-//import { SettingsComponent } from '../settings/settings.component'; //Test for routing i settings
+//import { SettingsComponent } from '../settings/settings.component'; //Flyttet til settings-routing
 
 const appRoutes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
-  //{path:'settings', component: SettingsComponent}, //Test for routing i settings
+  //{path:'settings', component: SettingsComponent}, //Flyttet til settings-routing
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: HomeComponent}
 ]
