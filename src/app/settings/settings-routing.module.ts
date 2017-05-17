@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-//import { CommonModule } from '@angular/common'; //not needed
 import { RouterModule, Routes } from '@angular/router';
 
 import { SettingsHomeComponent } from './settings-home.component';

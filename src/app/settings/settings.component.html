@@ -9,10 +9,10 @@
         <label for="appName">App Name:</label><input class="textInput" id="appName" type="text" placeholder="Name"  name="appName" max="30" [(ngModel)]="settings.appName"><br><br>
         <label for="owner">Owner:</label><input      class="textInput" id="owner"   type="text" placeholder="Owner" name="owner"   max="20" [(ngModel)]="settings.owner"><br><br>
         <p>Devices:</p><br>
-        <input class="checkInput" type="checkbox" id="lifx"         name="lifX"         [(ngModel)]="settings.lifX"><label for="lifx">LifeX Bulb</label> <br>
-        <input class="checkInput" type="checkbox" id="philipshue"   name="philipsHue"   [(ngModel)]="settings.philipsHue"><label for="philipshue">Philips Hue</label><br>
-        <input class="checkInput" type="checkbox" id="ikeatraadfri" name="ikeaTraadfri" [(ngModel)]="settings.ikeaTraadFri"><label for="ikeatraadfri">Ikea Trådfri</label><br>
-        <input class="checkInput" type="checkbox" id="custom"       name="custom"       [(ngModel)]="settings.custom"><label for="custom">Custom input</label><br>
+        <input class="checkInput" #l type="checkbox" id="lifx"         name="lifX"         [(ngModel)]="settings.lifX"><label for="lifx">LifeX Bulb</label> <br>
+        <input class="checkInput" #p type="checkbox" id="philipshue"   name="philipsHue"   [(ngModel)]="settings.philipsHue"><label for="philipshue">Philips Hue</label><br>
+        <input class="checkInput" #i type="checkbox" id="ikeatraadfri" name="ikeaTraadfri" [(ngModel)]="settings.ikeaTraadFri"><label for="ikeatraadfri">Ikea Trådfri</label><br>
+        <input class="checkInput" #c type="checkbox" id="custom"       name="custom"       [(ngModel)]="settings.custom"><label for="custom">Custom input</label><br>
         <input class="submitInput" type="submit" value="Save">
       </form>
     </div>

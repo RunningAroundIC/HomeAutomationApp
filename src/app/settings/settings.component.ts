@@ -17,13 +17,13 @@ export class SettingsComponent implements OnInit
   private isData: boolean;
 
   @ViewChild('f') infoForm: any;
+  @ViewChild('l') isLifxChecked: boolean; //test hvis lifx ikke længerer er hakket af, så skal dens options ikke vises.
 
   constructor(private service : SettingsService, private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() 
   {
     this.checkSettings();
-    console.log(this.activatedRoute.children);
   }
 
     private checkSettings()
@@ -65,6 +65,7 @@ export class SettingsComponent implements OnInit
     this.service.deleteSettings(this.settings._id).subscribe();
     this.infoForm.reset();
   }
+
 
 //relative navigating:
 
