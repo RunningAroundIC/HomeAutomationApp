@@ -18,7 +18,7 @@
     </div>
 
     <div id="lifxInfo" class="deviceBox">
-      <div *ngIf="settings.lifX; then lifx; else hidden"></div>
+      <div *ngIf="settings.lifX; then lifx;"></div>
       <ng-template #lifx>
         <div class="settingsBox">
           <h2>LifX:</h2>
@@ -26,39 +26,39 @@
             LifX is active, by clicking on the gear icon you 
             will be able to setup your LifX Wi-Fi bulb.
           </p>
-          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" routerLink="/settings/lifx" routerLinkActive="active"></i>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" (click)="navLifx()"></i>
         </div>
       </ng-template>
     </div>
 
     <div id="philipsHueInfo" class="deviceBox">
-      <div *ngIf="settings.philipsHue; then philipsHue; else hidden;"></div>
+      <div *ngIf="settings.philipsHue; then philipsHue;"></div>
       <ng-template #philipsHue>
         <div class="settingsBox">
           <h2>Philips Hue:</h2>
           <p>
             Setup of Philips Hue system.
           </p>
-          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" routerLink="/settings/philipshue" routerLinkActive="active"></i>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" (click)="navPhilipsHue()"></i>
         </div>
       </ng-template>
     </div>
 
     <div id="ikeaTraadFriInfo" class="deviceBox">
-      <div *ngIf="settings.ikeaTraadFri; then itf; else hidden;"></div>
+      <div *ngIf="settings.ikeaTraadFri; then itf;"></div>
       <ng-template #itf>
         <div class="settingsBox">
           <h2>Ikea Trådfri:</h2>
           <p>
             Setup of Ikea Trådfri system.
           </p>
-          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" routerLink="/settings/ikeatraadfri" routerLinkActive="active"></i>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" (click)="navIkeaTraadFri()"></i>
         </div>
       </ng-template>
     </div>
 
     <div id="customInfo" class="deviceBox">
-      <div *ngIf="settings.custom; then custom; else hidden;"></div>
+      <div *ngIf="settings.custom; then custom;"></div>
       <ng-template #custom>
         <div class="settingsBox">
           <h2>Custom:</h2>
@@ -67,12 +67,13 @@
             IOT devices or other services. By pressing on the gear icon, you will be able to
             setup a custom service(s) for your home.
           </p>
-          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" routerLink="/settings/custom" routerLinkActive="active"></i>
+          <i class="fa fa-cog setupCog" aria-hidden="true" title="Setup" (click)="navCustom()"></i>
         </div>
       </ng-template>
     </div>
 
   </ng-template>
   </div>
+  <router-outlet></router-outlet>
 </main>
 

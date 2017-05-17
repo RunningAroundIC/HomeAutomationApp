@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { SettingsHomeComponent } from './settings-home.component';
 import { SettingsComponent } from './settings.component';
 import { LifxComponent } from './lifx/lifx.component';
 import { PhilipshueComponent } from './philipshue/philipshue.component';
@@ -13,6 +14,7 @@ import { SettingsRoutingModule } from './settings-routing.module';
 @NgModule({
   
   declarations: [
+    SettingsHomeComponent,
     SettingsComponent,
     LifxComponent,
     PhilipshueComponent,

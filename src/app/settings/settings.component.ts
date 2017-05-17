@@ -23,6 +23,7 @@ export class SettingsComponent implements OnInit
   ngOnInit() 
   {
     this.checkSettings();
+    console.log(this.activatedRoute.children);
   }
 
     private checkSettings()
@@ -63,6 +64,28 @@ export class SettingsComponent implements OnInit
   {
     this.service.deleteSettings(this.settings._id).subscribe();
     this.infoForm.reset();
+  }
+
+//relative navigating:
+
+  private navLifx()
+  {
+    this.router.navigate(['./lifx'], {relativeTo: this.activatedRoute});
+  }
+
+   private navPhilipsHue()
+  {
+    this.router.navigate(['./philipshue'], {relativeTo: this.activatedRoute});
+  }
+
+   private navIkeaTraadFri()
+  {
+    this.router.navigate(['./ikeatraadfri'], {relativeTo: this.activatedRoute});
+  }
+
+   private navCustom()
+  {
+    this.router.navigate(['./custom'], {relativeTo: this.activatedRoute});
   }
 
 }

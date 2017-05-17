@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+//import { CommonModule } from '@angular/common'; //not needed
 import { RouterModule, Routes } from '@angular/router';
 
 import { SettingsHomeComponent } from './settings-home.component';
@@ -10,6 +10,7 @@ import { IkeatraadfriComponent } from './ikeatraadfri/ikeatraadfri.component';
 import { CustomComponent } from './custom/custom.component';
 
 const settingsRoutes: Routes = [
+  {path:'', redirectTo: '/settings', pathMatch: 'full'},
   {
     path: 'settings',
     component: SettingsHomeComponent,
@@ -20,10 +21,22 @@ const settingsRoutes: Routes = [
         component: SettingsComponent,
         children: 
         [
-          {path: '', component: LifxComponent},
-          {path: '', component: PhilipshueComponent},
-          {path: '', component: IkeatraadfriComponent},
-          {path: '', component: CustomComponent}
+          {
+            path: 'lifx', 
+            component: LifxComponent
+          },
+          {
+            path: 'philipshue', 
+            component: PhilipshueComponent
+          },
+          {
+            path: 'ikeatraadfri', 
+            component: IkeatraadfriComponent
+          },
+          {
+            path: 'custom', 
+            component: CustomComponent
+          }
         ]
       }
     ]
@@ -38,10 +51,8 @@ const settingsRoutes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
     RouterModule.forChild(settingsRoutes)
   ],
-  declarations: [],
   exports: [RouterModule]
 })
 export class SettingsRoutingModule { }
