@@ -9,7 +9,7 @@ import { IkeatraadfriComponent } from './ikeatraadfri/ikeatraadfri.component';
 import { CustomComponent } from './custom/custom.component';
 
 const settingsRoutes: Routes = [
-  {path:'', redirectTo: '/settings', pathMatch: 'full'},
+  {path:'', redirectTo: '/settings', pathMatch: 'full'}, //ikke sikker på denne er nødvendig eller fungerer.
   {
     path: 'settings',
     component: SettingsHomeComponent,
