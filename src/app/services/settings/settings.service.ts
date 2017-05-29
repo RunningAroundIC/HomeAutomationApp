@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SettingsService 
 {
-  //API
+  //API url
   private settingsUrl: string = "http://localhost:3000/settings";
 
 
@@ -40,6 +40,7 @@ export class SettingsService
   {
     return this.http.delete(this.settingsUrl + "/delete/" + id, this.getHeaderOptions()).map(responce => responce.json());
   }
+
 
   private getHeaderOptions(): RequestOptions 
   {

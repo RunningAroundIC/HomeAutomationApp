@@ -39,13 +39,7 @@ const settingsRoutes: Routes = [
       }
     ]
   }
-  // {path: 'settings', component: SettingsComponent},
-  // {path: 'settings/lifx', component: LifxComponent},
-  // {path: 'settings/philipshue', component: PhilipshueComponent},
-  // {path: 'settings/ikeatraadfri', component: IkeatraadfriComponent},
-  // {path: 'settings/custom', component: CustomComponent}
 ]
-
 
 @NgModule({
   imports: [

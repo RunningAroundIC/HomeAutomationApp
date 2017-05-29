@@ -8,15 +8,12 @@ import { AppRouterModule } from './app-router/app-router.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-//import { AboutComponent } from './about/about.component'; // Lazy loading af about
-//import { SettingsComponent } from './settings/settings.component'; //Test for routing i settings
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    //AboutComponent // Lazy loading af about
   ],
   imports: [
     BrowserModule,
