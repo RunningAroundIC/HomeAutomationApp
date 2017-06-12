@@ -1,3 +1,17 @@
 <main>
-  <p>Home</p>
+  <div class="container">
+    <div id="infoBox" class="box info">
+      <form>
+        <div id="topLabel">
+            <label for="session1">Test Field 1:</label><input id="session1" type="text" placeholder="Session1" name="sessionName1">
+        </div>
+        <div id="bottomLabel">
+            <label for="session2">Test Field 2:</label><input id="session2" type="text" placeholder="Session2" name="sessionName2">
+        </div>
+        <div id="saveInput">
+            <input class="submitInput" type="submit" value="Save" (click)="save()">
+        </div>
+      </form>
+    </div>
+  </div>
 </main>

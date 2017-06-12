@@ -17,7 +17,6 @@ export class SettingsComponent implements OnInit
   private isData: boolean;
 
   @ViewChild('f') infoForm: any;
-  @ViewChild('l') isLifxChecked: boolean; //test hvis lifx ikke længerer er hakket af, så skal dens options ikke vises.
 
   constructor(private service : SettingsService, private router: Router, private activatedRoute: ActivatedRoute) {}
 

@@ -30,9 +30,10 @@
 .info p
 {
     color: #19c63e;
-    display: inline;
     padding: 1px;
     font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: -1px;
 }
 
 .info .textInput
@@ -56,6 +57,11 @@
     font-family: 'Ubuntu', sans-serif;
     border-radius: 2px;
     padding: 3px;
+}
+
+#appNameDiv
+{
+    margin-bottom: 10px;
 }
 
 .checkInput

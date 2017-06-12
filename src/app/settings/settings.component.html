@@ -5,15 +5,31 @@
     <div id="mainInfo" class="settingsBox info">
       <h2>Info:</h2>
       <i id="deleteSettingsButton" class="fa fa-times" aria-hidden="true" (click)="deleteSettings()"></i>
-      <form #f="ngForm" (ngSubmit)="save(f.value)" >
-        <label for="appName">App Name:</label><input class="textInput" id="appName" type="text" placeholder="Name"  name="appName" max="30" [(ngModel)]="settings.appName"><br><br>
-        <label for="owner">Owner:</label><input      class="textInput" id="owner"   type="text" placeholder="Owner" name="owner"   max="20" [(ngModel)]="settings.owner"><br><br>
-        <p>Devices:</p><br>
-        <input class="checkInput" #l type="checkbox" id="lifx"         name="lifX"         [(ngModel)]="settings.lifX"><label for="lifx">LifeX Bulb</label> <br>
-        <input class="checkInput" #p type="checkbox" id="philipshue"   name="philipsHue"   [(ngModel)]="settings.philipsHue"><label for="philipshue">Philips Hue</label><br>
-        <input class="checkInput" #i type="checkbox" id="ikeatraadfri" name="ikeaTraadfri" [(ngModel)]="settings.ikeaTraadFri"><label for="ikeatraadfri">Ikea Trådfri</label><br>
-        <input class="checkInput" #c type="checkbox" id="custom"       name="custom"       [(ngModel)]="settings.custom"><label for="custom">Custom input</label><br>
-        <input class="submitInput" type="submit" value="Save">
+      <form #f="ngForm" (ngSubmit)="save(f.value)">
+        <div id="appNameDiv">
+            <label for="appName">App Name:</label><input class="textInput" id="appName" type="text" placeholder="Name"  name="appName" max="30" [(ngModel)]="settings.appName">
+        </div>
+        <div id="ownerDiv">
+            <label for="owner">Owner:</label><input      class="textInput" id="owner"   type="text" placeholder="Owner" name="owner"   max="20" [(ngModel)]="settings.owner">
+        </div>
+
+        <p>Devices:</p>
+
+        <div id="lifxInput">
+            <input class="checkInput" type="checkbox" id="lifx"         name="lifX"         [(ngModel)]="settings.lifX"><label for="lifx">LifeX Bulb</label>
+        </div>
+        <div id="philipshueInput">
+            <input class="checkInput" type="checkbox" id="philipshue"   name="philipsHue"   [(ngModel)]="settings.philipsHue"><label for="philipshue">Philips Hue</label>
+        </div>
+        <div id="ikeatraadfriInput">
+            <input class="checkInput" type="checkbox" id="ikeatraadfri" name="ikeaTraadfri" [(ngModel)]="settings.ikeaTraadFri"><label for="ikeatraadfri">Ikea Trådfri</label>
+        </div>
+        <div id="customInput">
+             <input class="checkInput" type="checkbox" id="custom"       name="custom"       [(ngModel)]="settings.custom"><label for="custom">Custom input</label>
+        </div>
+        <div id="saveInput">
+            <input class="submitInput" type="submit" value="Save">
+        </div>
       </form>
     </div>
 

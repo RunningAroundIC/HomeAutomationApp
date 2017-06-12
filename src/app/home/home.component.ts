@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Home } from 'app/services/home/home';
 
 
 @Component({
@@ -8,11 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  private home : Home;
+
   constructor() { }
 
+  ngOnInit() {}
 
-
-  ngOnInit() {
+  private save()
+  {
+    
   }
 
 }
