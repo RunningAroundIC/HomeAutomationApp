@@ -25,8 +25,15 @@ export class HomeComponent implements OnInit {
 
   private checkStorage()
   {
-    let result = JSON.parse(sessionStorage.localSession);
-    console.log(result);
+    let result = JSON.parse(sessionStorage.getItem("localSession"));
+    if(result === null)
+    {
+      this.home = new Home();
+    }
+    else
+    {
+      this.home = result;
+    }
   }
 
 
