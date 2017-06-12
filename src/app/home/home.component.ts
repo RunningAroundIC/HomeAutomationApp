@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Home } from 'app/services/home/home';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Session } from 'app/services/home/session';
+import { Local } from 'app/services/home/local';
 
 
 @Component({
@@ -9,30 +10,61 @@ import { Home } from 'app/services/home/home';
 })
 export class HomeComponent implements OnInit {
 
-  private home : Home; 
+  private session : Session;
+  private local : Local; 
+
+  @ViewChild('f') sessionForm: any;
+  @ViewChild('l') localForm: any;
 
   constructor() {}
 
   ngOnInit() 
   {
-    this.checkStorage();
+    this.checkSessionStorage();
+    this.checkLocalStorage();
   }
-
-  private save(form:any)
+  //Save Session data, data will be deleted if the browser is closed.
+  private sessionSave(form:any)
   {
-    sessionStorage.setItem("localSession", JSON.stringify(form));
+    sessionStorage.setItem("Session", JSON.stringify(form));
   }
-
-  private checkStorage()
+  //Save Local data, data will NOT be deleted if the browser is closed.
+  private localSave(form:any)
   {
-    let result = JSON.parse(sessionStorage.getItem("localSession"));
+    localStorage.setItem("Local", JSON.stringify(form));
+  }
+  //Clears the form.
+  private clearStorage()
+  {
+    sessionStorage.clear();
+    localStorage.clear();
+    this.sessionForm.reset();
+    this.localForm.reset();
+  }
+  //Checking if there is any Session Storage
+  private checkSessionStorage()
+  {
+    let result = JSON.parse(sessionStorage.getItem("Session"));
     if(result === null)
     {
-      this.home = new Home();
+      this.session = new Session();
     }
     else
     {
-      this.home = result;
+      this.session = result;
+    }
+  }
+  //Checking is there is any Local Storage
+  private checkLocalStorage()
+  {
+    let result = JSON.parse(localStorage.getItem("Local"));
+    if(result === null)
+    {
+      this.local = new Local();
+    }
+    else
+    {
+      this.local = result;
     }
   }
 

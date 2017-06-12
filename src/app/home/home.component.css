@@ -29,9 +29,11 @@
 .info input
 {
     margin-left: 7px;
+    float: right;
 }
 
-#topLabel
+.labelMargin
 {
     margin-bottom: 10px;
 }
+
