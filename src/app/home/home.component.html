@@ -1,15 +1,15 @@
 <main>
   <div class="container">
     <div id="infoBox" class="box info">
-      <form>
+      <form #f="ngForm" (ngSubmit)="save(f.value)">
         <div id="topLabel">
-            <label for="session1">Test Field 1:</label><input id="session1" type="text" placeholder="Session1" name="sessionName1">
+            <label for="session1">Test Field 1:</label><input id="session1" type="text" placeholder="Session1" name="sessionName1" [(ngModel)]="home.session1">
         </div>
         <div id="bottomLabel">
-            <label for="session2">Test Field 2:</label><input id="session2" type="text" placeholder="Session2" name="sessionName2">
+            <label for="session2">Test Field 2:</label><input id="session2" type="text" placeholder="Session2" name="sessionName2" [(ngModel)]="home.session2">
         </div>
         <div id="saveInput">
-            <input class="submitInput" type="submit" value="Save" (click)="save()">
+            <input class="submitInput" type="submit" value="Save">
         </div>
       </form>
     </div>
