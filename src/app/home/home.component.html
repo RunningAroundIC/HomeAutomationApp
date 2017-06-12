@@ -1,17 +1,20 @@
 <main>
   <div class="container">
+    <!--<div *ngIf="settings; then container;"></div>
+    <ng-template #container>-->
     <div id="infoBox" class="box info">
-      <form #f="ngForm" (ngSubmit)="save(f.value)">
+      <form #f="ngForm" (keyup)="save(f.value)">
         <div id="topLabel">
-            <label for="session1">Test Field 1:</label><input id="session1" type="text" placeholder="Session1" name="sessionName1" [(ngModel)]="home.session1">
+            <label for="session1">Test Field 1:</label><input id="session1" type="text" placeholder="Session1" name="session1" [(ngModel)]="home.session1">
         </div>
         <div id="bottomLabel">
-            <label for="session2">Test Field 2:</label><input id="session2" type="text" placeholder="Session2" name="sessionName2" [(ngModel)]="home.session2">
+            <label for="session2">Test Field 2:</label><input id="session2" type="text" placeholder="Session2" name="session2" [(ngModel)]="home.session2">
         </div>
-        <div id="saveInput">
+        <!--<div id="saveInput">
             <input class="submitInput" type="submit" value="Save">
-        </div>
+        </div>-->
       </form>
     </div>
+    <!--</ng-template>-->
   </div>
 </main>
