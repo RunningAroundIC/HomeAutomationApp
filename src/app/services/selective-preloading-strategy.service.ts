@@ -6,13 +6,13 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class SelectivePreloadingStrategyService implements PreloadingStrategy 
 {
-  preloadedModules: string[] = [];
+  //preloadedModules: string[] = [];
 
   preload(route: Route, load: () => Observable<any>): Observable<any> 
   {
     if (route.data && route.data['preload'])
     {
-      this.preloadedModules.push(route.path);
+      //this.preloadedModules.push(route.path);
       console.log('Preloaded: '+ route.path);
       return load();
     }
