@@ -23,16 +23,19 @@ export class HomeComponent implements OnInit {
     this.checkSessionStorage();
     this.checkLocalStorage();
   }
+
   //Save Session data, data will be deleted if the browser is closed.
   private sessionSave(form:any)
   {
     sessionStorage.setItem("Session", JSON.stringify(form));
   }
+
   //Save Local data, data will NOT be deleted if the browser is closed.
   private localSave(form:any)
   {
     localStorage.setItem("Local", JSON.stringify(form));
   }
+
   //Clears the form.
   private clearStorage()
   {
@@ -41,6 +44,7 @@ export class HomeComponent implements OnInit {
     this.sessionForm.reset();
     this.localForm.reset();
   }
+
   //Checking if there is any Session Storage
   private checkSessionStorage()
   {
@@ -54,6 +58,7 @@ export class HomeComponent implements OnInit {
       this.session = result;
     }
   }
+  
   //Checking is there is any Local Storage
   private checkLocalStorage()
   {
