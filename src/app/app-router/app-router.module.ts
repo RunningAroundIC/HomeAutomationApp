@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home.component';
 
 const appRoutes: Routes = [
   {path:'home', component: HomeComponent},
+  {path:'settings', loadChildren: 'app/settings/settings.module#SettingsModule'},
   {path:'about', loadChildren: 'app/about/about.module#AboutModule'},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: HomeComponent}

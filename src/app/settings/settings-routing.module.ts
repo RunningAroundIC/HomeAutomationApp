@@ -10,7 +10,7 @@ import { CustomComponent } from './custom/custom.component';
 
 const settingsRoutes: Routes = [
   {
-    path: 'settings',
+    path: '',
     component: SettingsHomeComponent,
     children: 
     [
