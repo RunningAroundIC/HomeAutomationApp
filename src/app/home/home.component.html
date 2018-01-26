@@ -1,3 +1,25 @@
 <main>
-  <p>Home</p>
+  <div class="container">
+    <div id="infoBox" class="box info">
+      <form #f="ngForm" (keyup)="sessionSave(f.value)">
+        <div class="labelMargin">
+            <label for="session1">Session Field 1:</label><input id="session1" type="text" placeholder="Session1" name="session1" [(ngModel)]="session.session1">
+        </div>
+        <div class="labelMargin">
+            <label for="session2">Session Field 2:</label><input id="session2" type="text" placeholder="Session2" name="session2" [(ngModel)]="session.session2">
+        </div>
+      </form>
+      <form #l="ngForm" (keyup)="localSave(l.value)">
+        <div class="labelMargin">
+            <label for="local1">local Field 1:</label><input id="local1" type="text" placeholder="Local1" name="local1" [(ngModel)]="local.local1">
+        </div>
+        <div class="labelMargin">
+            <label for="local2">local Field 2:</label><input id="local2" type="text" placeholder="Local2" name="local2" [(ngModel)]="local.local2">
+        </div>
+        <div class="clearInput">
+            <input  type="submit" value="Clear" (click)="clearStorage()">
+        </div>
+      </form>
+    </div>
+  </div>
 </main>

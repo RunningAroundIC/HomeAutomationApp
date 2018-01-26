@@ -10,15 +10,12 @@ export class AboutComponent implements OnInit {
 
   private routeState;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) 
-  {
-    
-  }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() 
   {
-    this.routeState = this.activatedRoute.data;
-    console.log(this.routeState);
+    //this.routeState = this.activatedRoute.data;
+    //console.log(this.routeState);
   }
 
 }

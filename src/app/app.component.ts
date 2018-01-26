@@ -25,7 +25,7 @@ export class AppComponent {
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private _elementRef : ElementRef) {}
 
-  ///
+  ///Event when side navigation is toggled.
   @Output() private clickOutside = new EventEmitter();
   
   ///Listner for clicks on the page when side navigation bar is active, for closing it if you just click outside of the menu.

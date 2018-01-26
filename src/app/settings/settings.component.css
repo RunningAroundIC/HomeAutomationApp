@@ -13,6 +13,7 @@
     border: 1px solid #7e8589;
     border-radius: 10px;
     width: auto;
+    min-height: 260px;
     padding: 7px;
     background-color: background-image -webkit-gradient(linear, left top, left bottom, from(start-color), to(end-color));
     background-image: -webkit-linear-gradient(top, #1a1c1e, transparent);
@@ -26,34 +27,106 @@
     border-bottom: 1px solid #7e8589;
 }
 
-.settingsBox p
+.info p
 {
     color: #19c63e;
-    display: inline;
     padding: 1px;
     font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: -1px;
 }
 
-.settingsBox .textInput
+.info .textInput
 {
     float: right;
     margin-left: 7px;
 }
 
-.settingsBox .textInput:focus
+.info .textInput:focus
 {
     outline-color: #c66a19;
 }
 
-.settingsBox span
+.info label
 {
-    color: #c66a19;
+    color: white;
 }
 
-.settingsBox button
+.info button
 {
     font-family: 'Ubuntu', sans-serif;
     border-radius: 2px;
     padding: 3px;
+}
+
+#appNameDiv
+{
+    margin-bottom: 10px;
+}
+
+.checkInput
+{
+    cursor: pointer;
+}
+
+.checkInput:focus
+{
+    outline-color: #c66a19;
+}
+
+.submitInput
+{
+    cursor: pointer;
+}
+
+.submitInput:focus
+{
+    outline-color: #c66a19;
+}
+
+.deviceBox
+{
+    position: relative;
+    margin-left: 3px;
+    border: none;
+}
+
+.deviceBox p
+{
+    text-align: left;
+    max-width: 15rem;
+    color: white;
+}
+
+.setupCog
+{
+    cursor: pointer;
+    font-size: 32px;
+    color: #7e8589;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s; 
+}
+
+.setupCog:hover
+{
+    color: #19c63e;
+}
+
+#deleteSettingsButton
+{
+    cursor: pointer;
+    color: #7e8589;
+    float: right;
+    margin-top: -50px;
+    font-size: 28px;
+    transition: 0.4s;
+}
+
+#deleteSettingsButton:hover
+{
+    color: #c66a19;
 }
 

@@ -1,0 +1,39 @@
+.container
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.box
+{
+    font-family: 'Ubuntu', sans-serif;
+    border: 1px solid #7e8589;
+    border-radius: 10px;
+    width: auto;
+    min-height: 260px;
+    padding: 7px;
+    background-color: background-image -webkit-gradient(linear, left top, left bottom, from(start-color), to(end-color));
+    background-image: -webkit-linear-gradient(top, #1a1c1e, transparent);
+    background-image: -moz-linear-gradient(top, #1a1c1e, transparent);
+    background-image: linear-gradient(to bottom, #1a1c1e, transparent);
+}
+
+.info label
+{
+    color: white;
+}
+
+.info input
+{
+    margin-left: 7px;
+    float: right;
+}
+
+.labelMargin
+{
+    margin-bottom: 10px;
+}
+
